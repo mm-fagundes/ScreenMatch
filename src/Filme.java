@@ -22,4 +22,8 @@ public class Filme {
         totalDeAvaliacoes++;
     }
 
+    void verNumAvaliacoes(){
+        System.out.println(totalDeAvaliacoes);
+    }
+
 }

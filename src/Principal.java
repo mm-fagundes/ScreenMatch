@@ -15,7 +15,7 @@ public class Principal{
         meuFilme.avalia(5);
         meuFilme.avalia(10);
         meuFilme.exibeFichaTecnica();
-
+        meuFilme.verNumAvaliacoes();
 
     }
 }
