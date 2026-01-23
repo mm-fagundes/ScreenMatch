@@ -1,13 +1,14 @@
+package br.com.mateus.modelos;
+
 public class Filme {
-    String nome;
+    public String nome;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double somaAvaliacoes;
-    int totalDeAvaliacoes;
+    private double somaAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
-    void exibeFichaTecnica(){
-
+    public void exibeFichaTecnica(){
         System.out.format("""
                 Nome: %s
                 Ano de Lançamento: %d
@@ -17,13 +18,16 @@ public class Filme {
                 """ ,nome,anoDeLancamento, somaAvaliacoes,duracaoEmMinutos, totalDeAvaliacoes);
     }
 
-    void avalia(double nota){
+    public void avalia(double nota){
         somaAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
 
-    void verNumAvaliacoes(){
-        System.out.println(totalDeAvaliacoes);
+    public double pegaMedia(){
+        return somaAvaliacoes /totalDeAvaliacoes;
     }
 
+    public int getTotalDeAvaliacoes(){
+        return totalDeAvaliacoes;
+    }
 }

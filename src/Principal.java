@@ -1,3 +1,5 @@
+import br.com.mateus.modelos.Filme;
+
 public class Principal{
 
 
@@ -7,15 +9,14 @@ public class Principal{
         meuFilme.nome = "O Poderoso Chefão";
         meuFilme.anoDeLancamento = 1970;
         meuFilme.duracaoEmMinutos = 180;
-        meuFilme.somaAvaliacoes = 5;
-        meuFilme.totalDeAvaliacoes = 105;
         meuFilme.incluidoNoPlano = true;
 
         meuFilme.avalia(8);
         meuFilme.avalia(5);
         meuFilme.avalia(10);
         meuFilme.exibeFichaTecnica();
-        meuFilme.verNumAvaliacoes();
+        System.out.println("O total de avaliações é: "+meuFilme.getTotalDeAvaliacoes());
+        System.out.println(meuFilme.pegaMedia());
 
     }
 }
