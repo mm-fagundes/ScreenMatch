@@ -16,6 +16,6 @@ public class CalculadoraTempo {
         tempoTotal = (tempoTotal + t.getDuracaoEmMinutos()) / 60;
     }
 
-
+    // Continuar projeto.
 
 }
