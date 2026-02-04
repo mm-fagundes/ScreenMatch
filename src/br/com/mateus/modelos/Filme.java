@@ -1,6 +1,9 @@
 package br.com.mateus.modelos;
 
-public class Filme extends Titulo{
+import calculo.Classificavel;
+import org.w3c.dom.ls.LSOutput;
+
+public class Filme extends Titulo implements Classificavel {
 
     private String diretor;
 
@@ -10,5 +13,15 @@ public class Filme extends Titulo{
 
     public String getDiretor() {
         return diretor;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) pegaMedia() / 2;
+    }
+
+    @Override
+    public String toString() {
+        return getNome() +" (" + getAnoDeLancamento()+")";
     }
 }
