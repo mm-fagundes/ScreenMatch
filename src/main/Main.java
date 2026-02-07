@@ -12,16 +12,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("The Godfather");
+        Filme meuFilme = new Filme(1990, "The Godfather");
         meuFilme.setAnoDeLancamento(1990);
         meuFilme.setDuracaoEmMinutos(120);
         meuFilme.setIncluidoNoPlano(true);
-        meuFilme.setDiretor("James Gunn");
 
-        Serie serie1 = new Serie();
-        serie1.setNome("Lost");
-        serie1.setAnoDeLancamento(2008);
+        Serie serie1 = new Serie(2008, "Lost");
         serie1.setTemporadas(5);
         serie1.setAtiva(true);
         serie1.setEpisodiosPorTemporada(10);
@@ -44,14 +40,12 @@ public class Main {
         episodio.setTotalVizualicacoes(300);
         filtro.filtra(episodio);
 
-        var filmeMateus = new Filme();
-        filmeMateus.setNome("Planeta dos Macacos");
+        var filmeMateus = new Filme(2003, "Planeta dos Macacos");
         filmeMateus.setDuracaoEmMinutos(200);
         filmeMateus.setAnoDeLancamento(2003);
         filmeMateus.avalia(10);
 
-        var filmeAlany = new Filme();
-        filmeAlany.setNome("O incrivel Mundo De Gumaball: O filme");
+        var filmeAlany = new Filme(2026, "O Incrivel Mundo de Gumball: O Filme");
         filmeAlany.setDuracaoEmMinutos(90);
         filmeAlany.setAnoDeLancamento(2026);
         filmeAlany.setDiretor("Gumball");
@@ -64,5 +58,7 @@ public class Main {
         for(int i = 0; i < listaDeFilmes.size(); i ++){
             System.out.println(listaDeFilmes.get(i));
         }
+
+
     }
 }

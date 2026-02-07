@@ -8,6 +8,11 @@ public class Episodio implements Classificavel {
     private Serie serie;
     private int totalVizualicacoes;
 
+
+
+
+
+
     public int getNumero() {
         return numero;
     }
