@@ -4,7 +4,7 @@ import br.com.mateus.modelos.Filme;
 import br.com.mateus.modelos.Serie;
 import br.com.mateus.modelos.Titulo;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class MainComListas {
     static void main(String[] args) {
@@ -31,7 +31,7 @@ public class MainComListas {
         serie1.setMinutosPorEpisodio(50);
         serie1.setIncluidoNoPlano(true);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeAlany);
         filmeAlany.avalia(9);
         lista.add(filmeMateus);
@@ -50,7 +50,19 @@ public class MainComListas {
 
         }
 
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Mateus");
+        buscaPorArtista.add("Alany");
+        System.out.println(buscaPorArtista);
+        Collections.sort(buscaPorArtista);
+        System.out.println(buscaPorArtista);
 
+        Collections.sort(lista);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+
+        System.out.println(lista);
 
     }
 }
